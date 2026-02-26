@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: linear-gradient(135deg,#11998e,#38ef7d);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .result-card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            width: 380px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .badge {
+            font-size: 26px;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 20px 0;
+            background: #f2f2f2;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(90deg,#ff512f,#dd2476);
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 18px rgba(0,0,0,0.25);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="result-card">
+
+    <h1>Prediction Result</h1>
+
+    <div class="badge">
+        {{ prediction }}
+    </div>
+
+    <a href="/" class="btn">Try Another</a>
+
+</div>
+
+</body>
+</html>

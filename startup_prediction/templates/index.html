@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Startup Success Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg,#1d2671,#c33764);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(14px);
+            padding: 35px;
+            border-radius: 18px;
+            width: 420px;
+            color: white;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 7px 0;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+        input:focus {
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.35);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            background: linear-gradient(90deg,#00f260,#0575e6);
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+        }
+
+        .icon {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 18px;
+            font-size: 13px;
+            opacity: 0.85;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="icon">
+        <!-- simple SVG -->
+        <svg width="48" height="48" fill="white" viewBox="0 0 24 24">
+            <path d="M3 13h4v8H3zm7-6h4v14h-4zm7 3h4v11h-4z"/>
+        </svg>
+    </div>
+
+    <h1>Startup Predictor</h1>
+    <div class="subtitle">Acquired vs Closed Prediction</div>
+
+    <form action="/predict" method="post">
+
+        <input name="age_first_funding_year" placeholder="Age at First Funding Year" required>
+        <input name="age_last_funding_year" placeholder="Age at Last Funding Year" required>
+        <input name="age_first_milestone_year" placeholder="Age at First Milestone Year" required>
+        <input name="age_last_milestone_year" placeholder="Age at Last Milestone Year" required>
+        <input name="relationships" placeholder="Relationships" required>
+        <input name="funding_rounds" placeholder="Funding Rounds" required>
+        <input name="funding_total_usd" placeholder="Funding Total USD" required>
+        <input name="milestones" placeholder="Milestones" required>
+        <input name="avg_participants" placeholder="Avg Participants" required>
+
+        <button type="submit">Predict Outcome</button>
+
+    </form>
+
+    <footer>
+        Designed by Your Name • ML Project
+    </footer>
+
+</div>
+
+</body>
+</html>
